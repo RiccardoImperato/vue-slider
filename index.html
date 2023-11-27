@@ -14,6 +14,7 @@
     <div id="app">
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
+                <!-- Main image -->
                 <div class="item">
                     <img :src="game.images[currentIndex]" alt="Spiderman" />
                     <div class="text">
@@ -21,12 +22,15 @@
                         <p>{{ game.texts[currentIndex] }}</p>
                     </div>
                 </div>
+                <!-- /Main image -->
+                <!-- Thumb -->
                 <div class="thumbs">
                     <div class="prev" @click="prev"></div>
                     <div class="next" @click="next"></div>
                     <img v-for="(image, index) in game.images" :src="image" :alt="`immagine ${index}`" class="thumb"
                         :class="index === currentIndex ? 'active' : ''" @click="changeImage(index)">
                 </div>
+                <!-- /Thumb -->
             </div>
         </div>
     </div>

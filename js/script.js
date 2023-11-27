@@ -28,7 +28,6 @@
 // console.log(slides);
 
 // App
-
 const { createApp } = Vue;
 
 createApp({
@@ -36,7 +35,7 @@ createApp({
         return {
             game: {
                 titles: [
-                    'Marvel\'s Spiderman Miles Morale',
+                    'Marvel\'s Spiderman Miles Morales',
                     'Ratchet & Clank: Rift Apart',
                     'Fortnite',
                     'Stray',
@@ -46,7 +45,7 @@ createApp({
                     'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
                     'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
                     "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
-                    'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
+                    'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city.',
                     'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.'
                 ],
                 images: [
@@ -66,7 +65,6 @@ createApp({
             if (this.currentIndex > this.game.images.length - 1) {
                 this.currentIndex = 0;
             }
-
         },
         prev() {
             this.currentIndex--;
@@ -79,7 +77,7 @@ createApp({
         },
         autoPlay() {
             setInterval(this.next, 3000);
-        },
+        }
     },
     mounted() {
         this.autoPlay();
