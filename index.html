@@ -28,7 +28,7 @@
                     <div class="prev" @click="prev"></div>
                     <div class="next" @click="next"></div>
                     <img v-for="(image, index) in game.images" :src="image" :alt="`immagine ${index}`" class="thumb"
-                        :class="index === 0 ? 'active' : ''">
+                        :class="index === currentIndex ? 'active' : ''">
                 </div>
             </div>
 
