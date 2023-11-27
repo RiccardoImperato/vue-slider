@@ -58,7 +58,19 @@ createApp({
                 ]
             },
             currentIndex: 0,
-        }
+        };
     },
+    methods: {
+        next() {
+            console.log('next');
+            this.currentIndex++;
+
+        },
+        prev() {
+            console.log('prev');
+            this.currentIndex--;
+
+        }
+    }
 }).mount('#app');
 

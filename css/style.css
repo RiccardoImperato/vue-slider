@@ -35,19 +35,16 @@
 .thumbs {
     float: left;
     height: 300px;
-    width: 200px;
     background: #000;
     position: relative;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .thumb {
     height: calc((300px) / 5);
     opacity: 0.5;
-}
-
-.thumb img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
