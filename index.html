@@ -13,10 +13,10 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseenter="stopAutoplay" @mouseleave="startAutoplay">
                 <!-- Main image -->
                 <div class="item">
-                    <img :src="game.images[currentIndex]" alt="Spiderman" />
+                    <img :src="game.images[currentIndex]" :alt="game.titles[currentIndex]" />
                     <div class="text">
                         <h3>{{ game.titles[currentIndex] }}</h3>
                         <p>{{ game.texts[currentIndex] }}</p>

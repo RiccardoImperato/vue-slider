@@ -57,6 +57,7 @@ createApp({
                 ]
             },
             currentIndex: 0,
+            currentInterval: null
         };
     },
     methods: {
@@ -75,12 +76,15 @@ createApp({
         changeImage(index) {
             this.currentIndex = index;
         },
-        autoPlay() {
-            setInterval(this.next, 3000);
+        stopAutoplay() {
+            clearInterval(this.currentInterval);
+        },
+        startAutoplay() {
+            this.currentInterval = setInterval(this.next, 3000);
         }
     },
     mounted() {
-        this.autoPlay();
+        this.startAutoplay();
     }
 }).mount('#app');
 
